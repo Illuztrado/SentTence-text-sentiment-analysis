@@ -54,12 +54,12 @@ button{
   background-color: steelblue;
   padding: 10px;
   color: #fff;
-  
   cursor: pointer;
   font-weight: 500;
 }
 button:hover{
-  opacity: 1;
+  background-color: lightsteelblue;
+  color: rgb(52, 52, 52);
 }
 .result{
   width: 50%;
@@ -81,6 +81,14 @@ button,
 }
 .hidden{
   display: none;
+}
+footer {
+  margin: 20px auto;
+  color: grey;
+}
+a {
+  text-decoration: none;
+  color: #EAC5D8;
 }
 
 
