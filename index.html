@@ -2,33 +2,36 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="This app analyzes text to determine if it expresses positive/negative/neutral sentiment using MeaningCloud's Sentiment Analysis solution">
+    	<meta name="description" content="This app uses MeaningCloud's Sentiment Analysis tool to analyzes text & determine if it expresses positive/negative/neutral sentiment using MeaningCloud's Sentiment Analysis solution">
     	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<title>Sentiment Analysis App</title>
+		<title>SentTence</title>
 
-		<!-- external CSS link -->
+		<!-- external CSS links -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 
-		<h1>Sentiment Analysis App</h1>
-		<div>
-				Input text that you want to analyze. This app performs sentiment analysis and will categorize text as positive, neutral, or negative.
-				Try entering a random tweet for starters.
-				<textarea name="" id=""></textarea>
-				<button type="button" name="button">Analyze Text</button>
+		<h1>SentTence</h1>
+		<div class="inputBox">
+				<p>Perform sentiment analysis on text with the click of a button. The SentTence app will categorize text as either positive, neutral, or negative.</p>
+				<textarea name="" id="" placeholder="Input text that you want to analyze and click the button below. Try entering a random tweet!"></textarea>
+				<button type="button" name="button">Perform Analysis</button>
 		</div>
 
-		<h2>Results</h2>
-		<div class="result">
-			<p id="polarity"></p>
-			<p id="subjectivity"></p>
-			<p id="irony"></p>
-			<p id="confidence"></p>
-			<p id="agreement"></p>
+		<div class="result hidden">
+			<h2>Sentiment Analysis Results:</h2>
+			<p id="polarity" autocapitalize="words"></p>
+			<p id="subjectivity" autocapitalize="words"></p>
+			<p id="irony" autocapitalize="words"></p>
+			<p id="confidence" autocapitalize="words"></p>
+			<p id="agreement" autocapitalize="words"></p>
 			<!-- <input type="range" min="" max="" step=".01"> -->
 		</div>
 
