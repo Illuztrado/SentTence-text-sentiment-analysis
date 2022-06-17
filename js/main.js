@@ -1,6 +1,7 @@
-//Example fetch using pokemonapi.co
+//Event listener: On button click
 document.querySelector('button').addEventListener('click', getFetch);
 
+//Fetch using Meaningcloud's API
 function getFetch(){
   const text = document.querySelector('textarea').value;
   const formdata = new FormData();
@@ -13,6 +14,9 @@ function getFetch(){
     body: formdata,
     redirect: 'follow'
   };
+
+  // show results element
+  document.querySelector(".hidden").classList.remove("hidden");
 
   const response = fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
     // .then(response => ({
@@ -33,30 +37,31 @@ function getFetch(){
       console.log(data.confidence);
       console.log(data.agreement);
       let scoreTag = document.querySelector('#polarity');
+      scoreTag.innerText = "Polarity:";
       switch(data.score_tag) {
         case "P+":
-          scoreTag.innerText = "Strong Positive";
+          scoreTag.innerText += " Strong Positive";
           break;
         case "P":
-          scoreTag.innerText = "Positive";
+          scoreTag.innerText += " Positive";
           break;
         case "NEU":
-          scoreTag.innerText = "Neutral";
+          scoreTag.innerText += " Neutral";
           break;
         case "N":
-          scoreTag.innerText = "Negative";
+          scoreTag.innerText += " Negative";
           break;
         case "N+":
-          scoreTag.innerText = "Strong Negative";
+          scoreTag.innerText += " Strong Negative";
           break;
         default:
-          scoreTag.innerText = "Without Polarity";
+          scoreTag.innerText += " Without Polarity";
           break;
       }
-      document.querySelector('#subjectivity').innerText = data.subjectivity;
-      document.querySelector('#irony').innerText = data.irony;
-      document.querySelector('#confidence').innerText = `Confidence: ${data.confidence}`;
-      document.querySelector('#agreement').innerText = data.agreement;
+      document.querySelector('#subjectivity').innerText = `Subjectivity: ${data.subjectivity.toLowerCase()}`;
+      document.querySelector('#irony').innerText = `Irony: ${data.irony.toLowerCase()}`;
+      document.querySelector('#confidence').innerText = `Confidence (0 to 100): ${data.confidence}`;
+      document.querySelector('#agreement').innerText = `Agreement: ${data.agreement.toLowerCase()}`;
     })
     .catch(err => {
         console.log(`error ${err}`)
