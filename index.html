@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This app analyzes text to determine if it expresses positive/negative/neutral sentiment using MeaningCloud's Sentiment Analysis solution">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>Sentiment Analysis App</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<h1>Sentiment Analysis App</h1>
+		<div>
+				Input text that you want to analyze. This app performs sentiment analysis and will categorize text as positive, neutral, or negative.
+				Try entering a random tweet for starters.
+				<textarea name="" id=""></textarea>
+				<button type="button" name="button">Analyze Text</button>
+		</div>
+
+		<h2>Results</h2>
+		<div class="result">
+			<p id="polarity"></p>
+			<p id="subjectivity"></p>
+			<p id="irony"></p>
+			<p id="confidence"></p>
+			<p id="agreement"></p>
+			<!-- <input type="range" min="" max="" step=".01"> -->
+		</div>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
