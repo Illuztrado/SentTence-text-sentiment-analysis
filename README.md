@@ -4,9 +4,11 @@ SentTence: Perform sentiment analysis on text with the click of a button. SentTe
 ## Technologies utilized
 **Built with**: HTML, CSS, JavaScript, [MeaningCloud](https://github.com/MeaningCloud/)'s Sentiment Analysis API
 
-SentTence is writtern in HTML, CSS, and JavaScript. The application takes in user input in the form of text and utilizes  [MeaningCloud](https://github.com/MeaningCloud/)'s Sentiment Analysis API to perform sentiment analysis on the text input.
+### Client
+SentTence is written in HTML, CSS, and JavaScript.
 
-The API returns the following response objects (taken from MeaningCloud's API Documentation): https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/doc/response
+### Server
+SentTence takes in user requests in text format from the client and utilizes [MeaningCloud] (https://github.com/MeaningCloud/)'s Sentiment Analysis API to perform sentiment analysis on the text input. The API returns the following response objects (taken from MeaningCloud's API Documentation): https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/doc/response
 <!-- <table>
   <thead>
     <th>Name</th>
