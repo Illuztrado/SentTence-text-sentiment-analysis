@@ -1,5 +1,5 @@
-# SentTence-text-sentiment-analysis
-SentTence: Perform sentiment analysis on text with the click of a button. SentTence will categorize text as either positive, neutral, or negative.
+# SentTence: A Sentiment Analysis Application
+SentTence: An application that performs sentiment analysis on text by calling on an external API. SentTence will categorize text as either positive, neutral, or negative.
 
 ## Technologies utilized
 **Built with**: HTML, CSS, JavaScript, [MeaningCloud](https://github.com/MeaningCloud/)'s Sentiment Analysis API
